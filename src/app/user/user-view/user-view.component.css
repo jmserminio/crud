@@ -1,0 +1,7 @@
+p {
+  padding: 5px;
+}
+p:nth-child(even) {
+  background-color: #818cf8;
+  color: #fff;
+}

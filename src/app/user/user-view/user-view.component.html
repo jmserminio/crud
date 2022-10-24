@@ -1,0 +1,38 @@
+
+<div class="flex w-9/12 mx-auto py-5">
+  <div class="w-1/5">
+    <p>ID</p>
+    <p>NAME</p>
+    <p>USERNAME</p>
+    <p>EMAIL</p>
+    <p>ADDRESS</p>
+    <p>CONTACT #</p>
+    <p>WEBSITE</p>
+    <p>COMPANY</p>
+  </div>
+  <div class="w-4/5">
+    <p>{{ userDetails?.id }}</p>
+    <p>{{ userDetails?.name }}</p>
+    <p>{{ userDetails?.username }}</p>
+    <p>{{ userDetails?.email }}</p>
+    <p>{{ userDetails?.address.city }}</p>
+    <p>{{ userDetails?.phone }}</p>
+    <p>{{ userDetails?.website }}</p>
+    <p>{{ userDetails?.company.name }}</p>
+  </div>
+</div>
+
+<div class="w-9/12 mx-auto text-right">
+  <button [routerLink]="['/']"
+    class="border
+    border-gray-400 
+    rounded
+    mt-2
+    ml-2
+    p-2
+    hover:border-indigo-400 
+    hover:bg-indigo-400 
+    hover:text-white">
+    BACK
+  </button>
+</div>

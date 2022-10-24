@@ -1,0 +1,8 @@
+
+<div class="w-9/12 mx-auto py-5">
+  
+  <app-user-form (addedUser)="toUserDetails($event)" [editData]="userData"></app-user-form>
+
+  <app-user-details (editedUser)="toUserDetails($event)" [userData]="userData"></app-user-details>
+
+</div>

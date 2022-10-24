@@ -1,0 +1,37 @@
+<form class="py-5" [formGroup]="formValue" (ngSubmit)="isEdit ? editUser() : addUser()">
+
+  <!-- Name -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Name</label>
+    <app-input [control]="name" placeholder="Enter name"></app-input>
+  </div>
+  <!-- Email -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Email Address</label>
+    <app-input [control]="email" placeholder="Enter email"></app-input>
+  </div>
+  <!-- Contact Number -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Contact Number</label>
+    <app-input [control]="phone" placeholder="Enter contact number"></app-input>
+  </div>
+
+  <div>
+    <button [disabled]="formValue.invalid"
+      type="submit"
+      class="border
+      border-gray-400 
+      rounded 
+      p-2
+      hover:border-indigo-400 
+      hover:bg-indigo-400 
+      hover:text-white
+      disabled:opacity-50
+      disabled:border-indigo-400 
+      disabled:bg-indigo-400
+      disabled:text-white">
+      {{ isEdit ? "UPDATE" : "ADD" }}
+    </button>
+  </div>
+
+</form>

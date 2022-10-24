@@ -1,0 +1,53 @@
+<table class="w-full">
+  <thead>
+    <tr class="text-left">
+      <th class="w-1/12">ID</th>
+      <th>NAME</th>
+      <th>EMAIL ADDRESS</th>
+      <th>CONTACT NUMBER</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList; let i = index">
+      <td>{{ user?.id }}</td>
+      <td>{{ user?.name }}</td>
+      <td>{{ user?.email }}</td>
+      <td>{{ user?.phone }}</td>
+      <td class="text-right">
+        <button [routerLink]="['/user' , user.id]"
+          class="border
+          border-gray-400 
+          rounded
+          ml-px
+          p-2
+          hover:border-indigo-400 
+          hover:bg-indigo-400 
+          hover:text-white">
+          VIEW
+        </button>
+        <button (click)="editUser(user)"
+          class="border
+          border-gray-400 
+          rounded
+          ml-px
+          p-2
+          hover:border-indigo-400 
+          hover:bg-indigo-400 
+          hover:text-white">
+          EDIT
+        </button>
+        <button (click)="deleteUser(user, i)"
+          class="border
+          border-gray-400 
+          rounded
+          ml-px
+          p-2
+          hover:border-indigo-400 
+          hover:bg-indigo-400 
+          hover:text-white">
+          DELETE
+        </button>
+      </td>        
+    </tr>
+  </tbody>
+</table>
