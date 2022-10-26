@@ -5,11 +5,6 @@ import { UserViewComponent } from './user/user-view/user-view.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'users',
-  //   pathMatch: 'full'
-  // },
   {
     path: '',
     component: HomeComponent
